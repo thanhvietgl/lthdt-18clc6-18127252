@@ -11,8 +11,8 @@ void CongTy::NhapDS() {
 	cout << "Nhap so luong nhan vien: ";
 	cin >> n;
 	for (int i = 0; i < n; i++) {
-		cout << "Nhap thong tin nhan vien thu " << i << endl;
-		cout << "Loai nhan vien (1: NVSX; 2: NVQL): ";
+		cout << "Nhap thong tin nhan vien thu " << i+1 << endl;
+		cout << "Loai nhan vien (1: NVSX; 2: NVQL; 3:NVVP): ";
 		cin >> type;
 
 		p = NULL;
@@ -22,6 +22,9 @@ void CongTy::NhapDS() {
 		}
 		else if (type == 2) {
 			p = new NVQuanLi;
+		}
+		else if (type == 3) {
+			p = new NVVanPhong;
 		}
 
 		p->Nhap(); 
@@ -41,7 +44,7 @@ double CongTy::TinhTongLuong() {
 		sum =sum+ a[i]->TinhLuong();
 	}
 	return sum;
-}
+}	
 
 int CongTy::soLuongNVSX()
 {

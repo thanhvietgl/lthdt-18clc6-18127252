@@ -1,6 +1,7 @@
 #pragma once
 #include "NVQuanLi.h"
 #include"NVSanXuat.h"
+#include "NVVanPhong.h"
 
 class CongTy {
 private:
